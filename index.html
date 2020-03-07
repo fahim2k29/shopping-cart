@@ -87,28 +87,34 @@
          const priceAmount = parseFloat(price);
          const totalPrice = priceAmount + 1219;
          document.getElementById("price1").innerText = totalPrice;
-               //subtotal 
-            const subtotal = document.getElementById("subtotal").innerText;
-            const subtotalAmount = parseFloat(subtotal);
-            const subAmount = subtotalAmount + 1219;
-            document.getElementById("subtotal").innerText = subAmount;
-            document.getElementById("total").innerText = subAmount;         
+         //subtotal 
+         const subtotal = document.getElementById("subtotal").innerText;
+         const subtotalAmount = parseFloat(subtotal);
+         const subAmount = subtotalAmount + 1219;
+         document.getElementById("subtotal").innerText = subAmount;
+         document.getElementById("total").innerText = subAmount;         
             
          })
       //product one decrement button handler
          const decrementBtn1 = document.getElementById("decBtn1");
          decrementBtn1.addEventListener("click", function(){
+         const quantity = document.getElementById("quantity1").value;
+         if(quantity <= 0){
+           alert("Quantity negative is not possible.");
+         }
+         else{
          const quantity = document.getElementById("quantity1").value--;
          const price = document.getElementById("price1").innerText;
          const priceAmount = parseFloat(price);
          const totalPrice = priceAmount - 1219;
          document.getElementById("price1").innerText = totalPrice;
-            //subtotal 
-            const subtotal = document.getElementById("subtotal").innerText;
-            const subtotalAmount = parseFloat(subtotal);
-            const subAmount = subtotalAmount - 1219;
-            document.getElementById("subtotal").innerText = subAmount;
-            document.getElementById("total").innerText = subAmount;         
+         //subtotal 
+         const subtotal = document.getElementById("subtotal").innerText;
+         const subtotalAmount = parseFloat(subtotal);
+         const subAmount = subtotalAmount - 1219;
+         document.getElementById("subtotal").innerText = subAmount;
+         document.getElementById("total").innerText = subAmount;  
+         }       
            
          })
 
@@ -132,17 +138,23 @@
       //product two decrement button handler
          const decrementBtn2 = document.getElementById("decBtn2");
          decrementBtn2.addEventListener("click", function(){
+         const quantity = document.getElementById("quantity2").value;
+         if(quantity <= 0){
+           alert("Quantity negative is not possible.");
+         }
+         else{
          const quantity = document.getElementById("quantity2").value--;
          const price = document.getElementById("price2").innerText;
          const priceAmount = parseFloat(price);
          const totalPrice = priceAmount - 59;
          document.getElementById("price2").innerText = totalPrice;
-            //subtotal 
-            const subtotal = document.getElementById("subtotal").innerText;
-            const subtotalAmount = parseFloat(subtotal);
-            const subAmount = subtotalAmount - 59;
-            document.getElementById("subtotal").innerText = subAmount;
-            document.getElementById("total").innerText = subAmount;         
+         //subtotal 
+         const subtotal = document.getElementById("subtotal").innerText;
+         const subtotalAmount = parseFloat(subtotal);
+         const subAmount = subtotalAmount - 59;
+         document.getElementById("subtotal").innerText = subAmount;
+         document.getElementById("total").innerText = subAmount;         
+         }
             
          })
    </script>
